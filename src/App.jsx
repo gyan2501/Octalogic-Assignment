@@ -1,16 +1,21 @@
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import Home from "./pages/Home";
+import Courses from "./pages/Courses";
+import Signin from "./pages/Signin";
 
-import './App.css'
+
 
 function App() {
- 
-
   return (
     <>
-      <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+      <Routes>
+      <Route path="/" element={<Signin />}></Route>
+        <Route path="/home" element={<Home />}></Route>
+        <Route path="/courses" element={<Courses />}></Route>
+      </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
