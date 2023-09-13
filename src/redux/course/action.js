@@ -65,7 +65,6 @@ export const LatestEnrollFailureAction = () => {
 };
 
 // Best Student
-
 export const getBestStudents = (dispatch) => {
   // Complete get Best Students functionality here
   dispatch(BestStudentsRequestAction());
@@ -79,7 +78,7 @@ export const getBestStudents = (dispatch) => {
     });
 };
 
-// ENROLLMENT ACTIONS
+// Best Students ACTIONS
 export const BestStudentsRequestAction = () => {
   return { type: GET_BESTSTUDENTS_REQUEST };
 };

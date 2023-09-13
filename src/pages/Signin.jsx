@@ -8,7 +8,7 @@ const Signin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const distpatch = useDispatch();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -16,8 +16,8 @@ const Signin = () => {
     distpatch(loginAction(userData));
     setEmail("");
     setPassword("");
-    navigate("/home")
-    console.log(userData)
+    navigate("/home");
+    // console.log(userData);
   };
 
   return (

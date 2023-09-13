@@ -7,7 +7,7 @@ export const loginAction = (userData) => (dispatch) => {
     .post("https://reqres.in/api/login", userData)
     .then((res) => {
       dispatch({ type: LOGIN_SUCCESS, payload: res.data.token });
-      localStorage.setItem("token",res.data.token)
+      localStorage.setItem("token", res.data.token);
     })
     .catch(() => {
       dispatch({ type: LOGIN_FAILURE });

@@ -20,6 +20,7 @@ const intialState = {
 
 export const reducer = (state = intialState, { type, payload }) => {
   switch (type) {
+    // Course
     case GET_COURSE_REQUEST:
       return { ...state, isLoading: true };
     case GET_COURSE_SUCCESS:
@@ -27,7 +28,7 @@ export const reducer = (state = intialState, { type, payload }) => {
     case GET_COURSE_FAILURE:
       return { ...state, isLoading: false, isError: true };
 
-      
+    // Latest Enrollment
     case GET_LATESTENROLLMENT_REQUEST:
       return { ...state, isLoading: true };
     case GET_LATESTENROLLMENT_SUCCESS:
@@ -35,7 +36,7 @@ export const reducer = (state = intialState, { type, payload }) => {
     case GET_LATESTENROLLMENT_FAILURE:
       return { ...state, isLoading: false, isError: true };
 
-
+    // Best Students
     case GET_BESTSTUDENTS_REQUEST:
       return { ...state, isLoading: true };
     case GET_BESTSTUDENTS_SUCCESS:

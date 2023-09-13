@@ -7,7 +7,7 @@ const LatestEnrollment = () => {
   const courses = useSelector((state) => state.courseReducer);
 
   const AllEnrolls = courses.latestEnrollment;
-
+  const loading = courses.isLoading;
   // console.log("All Enroll", AllEnrolls);
 
   useEffect(() => {
@@ -25,31 +25,40 @@ const LatestEnrollment = () => {
         </p>
       </div>
       <div className="flex flex-col p-[24px] items-start gap-[16px] self-stretch rounded-[6px] bg-white justify-between">
-        <table className="min-w-full divide-y divide-gray-200 bg-white ">
-          <thead className="font-bold text-head text-[14px]  ">
-            <tr>
-              <th className="py-[8px]">Enr. No</th>
-              <th className=" py-[8px]">S. Name</th>
-              <th className=" py-[8px] ">C. Name</th>
-              <th className=" py-[8px]  ">Fees</th>
-              <th className=" py-[8px] ">Enr. Date</th>
-            </tr>
-          </thead>
-          <tbody className="bg-white divide-y text-center divide-gray-200 text-tableRow text-ceter">
-            {/* Table rows go here */}
-
-            {AllEnrolls?.map((el, i) => (
-              <tr key={i}>
-                <td className=" py-[8px] ">{el.enrollment_no}</td>
-                <td className=" py-[8px] ">{el.student_name}</td>
-                <td className=" py-[8px] ">{el.course_name}</td>
-                <td className=" py-[8px] ">{el.fees}</td>
-                <td className=" py-[8px] ">{el.enrollment_date}</td>
+        {loading ? (
+          <div className="m-auto">
+            <img
+              src="https://i.gifer.com/ZKZg.gif"
+              alt="loding indicator"
+              className="max-h-[100px]"
+            />
+          </div>
+        ) : (
+          <table className="min-w-full divide-y divide-gray-200 bg-white ">
+            <thead className="font-bold text-head text-[14px]  ">
+              <tr>
+                <th className="py-[8px]">Enr. No</th>
+                <th className=" py-[8px]">S. Name</th>
+                <th className=" py-[8px] ">C. Name</th>
+                <th className=" py-[8px]  ">Fees</th>
+                <th className=" py-[8px] ">Enr. Date</th>
               </tr>
-            ))}
+            </thead>
+            <tbody className="bg-white divide-y text-center divide-gray-200 text-tableRow text-ceter">
+              {/* Table rows go here */}
 
-          </tbody>
-        </table>
+              {AllEnrolls?.map((el, i) => (
+                <tr key={i}>
+                  <td className=" py-[8px] ">{el.enrollment_no}</td>
+                  <td className=" py-[8px] ">{el.student_name}</td>
+                  <td className=" py-[8px] ">{el.course_name}</td>
+                  <td className=" py-[8px] ">{el.fees}</td>
+                  <td className=" py-[8px] ">{el.enrollment_date}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        )}
       </div>
     </div>
   );
