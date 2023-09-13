@@ -1,4 +1,18 @@
+import { useEffect } from "react";
+import { getBestStudents } from "../redux/course/action";
+import { useDispatch, useSelector } from "react-redux";
+
 const BestStudents = () => {
+  const dispatch = useDispatch();
+  const courses = useSelector((state) => state.courseReducer);
+
+  const BestStudents = courses.bestStudents;
+
+  console.log("All Enroll", BestStudents);
+
+  useEffect(() => {
+    getBestStudents(dispatch);
+  }, []);
   return (
     <div className="flex flex-col items-start gap-[16px] w-full">
       <div className="flex justify-between items-center self-stretch">
@@ -23,46 +37,17 @@ const BestStudents = () => {
           </thead>
           <tbody className="bg-white divide-y text-center divide-gray-200 text-tableRow text-ceter">
             {/* Table rows go here */}
-            <tr>
-              <td className="py-[8px]">1</td>
-              <td className="py-[8px]">John Doe</td>
-              <td className="py-[8px]">Computer Science</td>
-              <td className="py-[8px]">3</td>
-              <td className="py-[8px]">$500</td>
-              <td className="py-[8px]">2023-09-12</td>
-            </tr>
-            <tr>
-              <td className="py-[8px]">2</td>
-              <td className="py-[8px]">John Doe</td>
-              <td className="py-[8px]">Computer Science</td>
-              <td className="py-[8px]">3</td>
-              <td className="py-[8px]">$500</td>
-              <td className="py-[8px]">2023-09-12</td>
-            </tr>
-            <tr>
-              <td className="py-[8px]">3</td>
-              <td className="py-[8px]">John Doe</td>
-              <td className="py-[8px]">Computer Science</td>
-              <td className="py-[8px]">3</td>
-              <td className="py-[8px]">$500</td>
-              <td className="py-[8px]">2023-09-12</td>
-            </tr>
-            <tr>
-              <td className="py-[8px]">4</td>
-              <td className="py-[8px]">John Doe</td>
-              <td className="py-[8px]">Computer Science</td>
-              <td className="py-[8px]">3</td>
-              <td className="py-[8px]">$500</td>
-              <td className="py-[8px]">2023-09-12</td>
-            </tr>
-            <tr>
-              <td className="py-[8px]">5</td>
-              <td className="py-[8px]">John Doe</td>
-              <td className="py-[8px]">Computer Science</td>
-              <td className="py-[8px]">3</td>
-              <td className="py-[8px]">$500</td>
-              <td className="py-[8px]">2023-09-12</td>
-            </tr>
+
+            {BestStudents?.map((el, i) => (
+              <tr key={i}>
+                <td className="py-[8px]">{el.registration_no}</td>
+                <td className="py-[8px]">{el.first_name}</td>
+                <td className="py-[8px]">{el.last_name}</td>
+                <td className="py-[8px]">{el.no_of_courses}</td>
+                <td className="py-[8px]">{el.total_fees}</td>
+                <td className="py-[8px]">{el.registration_date}</td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>

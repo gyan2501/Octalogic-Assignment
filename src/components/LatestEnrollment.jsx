@@ -38,7 +38,7 @@ const LatestEnrollment = () => {
           <tbody className="bg-white divide-y text-center divide-gray-200 text-tableRow text-ceter">
             {/* Table rows go here */}
 
-            {AllEnrolls.map((el, i) => (
+            {AllEnrolls?.map((el, i) => (
               <tr key={i}>
                 <td className=" py-[8px] ">{el.enrollment_no}</td>
                 <td className=" py-[8px] ">{el.student_name}</td>

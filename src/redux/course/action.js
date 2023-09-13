@@ -1,5 +1,8 @@
 import axios from "axios";
 import {
+  GET_BESTSTUDENTS_FAILURE,
+  GET_BESTSTUDENTS_REQUEST,
+  GET_BESTSTUDENTS_SUCCESS,
   GET_COURSE_FAILURE,
   GET_COURSE_REQUEST,
   GET_COURSE_SUCCESS,
@@ -34,7 +37,6 @@ export const CoursesFailureAction = () => {
   return { type: GET_COURSE_FAILURE };
 };
 
-
 // Latest Enrollment
 export const getLatestEnroll = (dispatch) => {
   // Complete get Latest Enrollment functionality here
@@ -49,8 +51,6 @@ export const getLatestEnroll = (dispatch) => {
     });
 };
 
-
-
 // ENROLLMENT ACTIONS
 export const LatestEnrollRequestAction = () => {
   return { type: GET_LATESTENROLLMENT_REQUEST };
@@ -62,4 +62,32 @@ export const LatestEnrollSuccessAction = (payload) => {
 
 export const LatestEnrollFailureAction = () => {
   return { type: GET_LATESTENROLLMENT_FAILURE };
+};
+
+// Best Student
+
+export const getBestStudents = (dispatch) => {
+  // Complete get Best Students functionality here
+  dispatch(BestStudentsRequestAction());
+  axios
+    .get(`https://octalogic-json-server.onrender.com/bestStudents`)
+    .then((res) => {
+      dispatch(BestStudentsSuccessAction(res.data));
+    })
+    .catch(() => {
+      dispatch(BestStudentsFailureAction());
+    });
+};
+
+// ENROLLMENT ACTIONS
+export const BestStudentsRequestAction = () => {
+  return { type: GET_BESTSTUDENTS_REQUEST };
+};
+
+export const BestStudentsSuccessAction = (payload) => {
+  return { type: GET_BESTSTUDENTS_SUCCESS, payload };
+};
+
+export const BestStudentsFailureAction = () => {
+  return { type: GET_BESTSTUDENTS_FAILURE };
 };

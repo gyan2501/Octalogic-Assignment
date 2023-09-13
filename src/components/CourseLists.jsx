@@ -54,7 +54,7 @@ const CourseLists = () => {
           </thead>
           <tbody className="bg-white divide-y  divide-gray-200 text-tableRow text-left">
             {/* Table rows go here and map All courses */}
-            {AllCourse.map((el, i) => (
+            {AllCourse?.map((el, i) => (
               <tr key={i}>
                 <td className="py-[8px] ">{el.Name}</td>
                 <td className="py-[8px]">{el.Description}</td>
