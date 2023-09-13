@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
-    <div className="flex flex-col items-center w-[96px] h-[1024px] p-[10px] pt-[12px] gap-[48px] border-r border-gray-300 bg-background-panel">
+    <div className="flex flex-col items-center w-[96px] h-[1024px] p-[10px] pt-[12px] gap-[48px] border-r border-gray-300 bg-background-panel bg-white">
       <div className=" items-center">
-        <img src="./Logo.png" alt="" />
+      <Link to={"/"}>   <img src="./Logo.png" alt="" /> </Link>
       </div>
 
       <div className="flex flex-col items-center gap-[16px] self-stretch">
