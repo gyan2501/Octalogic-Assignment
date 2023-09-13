@@ -1,0 +1,189 @@
+{
+    "latestEnrollment": [
+      {
+        "enrollment_no": "8",
+        "student_name": "Mary Doe",
+        "course_name": "Keyboard Basics",
+        "fees": "$280",
+        "enrollment_date": "18-01-2023"
+      },
+      {
+        "enrollment_no": "9",
+        "student_name": "Michael Smith",
+        "course_name": "Singing Fundamentals",
+        "fees": "$320",
+        "enrollment_date": "22-02-2023"
+      },
+      {
+        "enrollment_no": "10",
+        "student_name": "Emma Johnson",
+        "course_name": "Piano Fundamentals 101",
+        "fees": "$210",
+        "enrollment_date": "12-03-2023"
+      },
+      {
+        "enrollment_no": "11",
+        "student_name": "James Brown",
+        "course_name": "Bass Guitar Essentials",
+        "fees": "$260",
+        "enrollment_date": "06-04-2023"
+      },
+      {
+        "enrollment_no": "12",
+        "student_name": "Olivia White",
+        "course_name": "Advanced Violin",
+        "fees": "$380",
+        "enrollment_date": "14-05-2023"
+      }
+    ],
+
+    "bestStudents": [
+      {
+        "registration_no": 1006,
+        "first_name": "Mary",
+        "last_name": "Doe",
+        "no_of_courses": 4,
+        "total_fees": "$280",
+        "registration_date": "18-01-2023"
+      },
+      {
+        "registration_no": 1007,
+        "first_name": "Michael",
+        "last_name": "Smith",
+        "no_of_courses": 3,
+        "total_fees": "$320",
+        "registration_date": "22-02-2023"
+      },
+      {
+        "registration_no": 1008,
+        "first_name": "Emma",
+        "last_name": "Johnson",
+        "no_of_courses": 2,
+        "total_fees": "$210",
+        "registration_date": "12-03-2023"
+      },
+      {
+        "registration_no": 1009,
+        "first_name": "James",
+        "last_name": "Brown",
+        "no_of_courses": 1,
+        "total_fees": "$260",
+        "registration_date": "06-04-2023"
+      },
+      {
+        "registration_no": 1010,
+        "first_name": "Olivia",
+        "last_name": "White",
+        "no_of_courses": 4,
+        "total_fees": "$380",
+        "registration_date": "14-05-2023"
+      }
+    ],
+    "courses": [
+      {
+        "Name": "Tabla Mastery",
+        "Description": "Comprehensive tabla training.",
+        "Instructor": "Ravi Sharma",
+        "Instrument": "Tabla",
+        "DayofWeek": "Monday",
+        "No_ofStudents": 15,
+        "Price": "$250",
+        "Status": "Active"
+      },
+      {
+        "Name": "Sitar Techniques",
+        "Description": "Expert sitar playing.",
+        "Instructor": "Meera Patel",
+        "Instrument": "Sitar",
+        "DayofWeek": "Wednesday",
+        "No_ofStudents": 12,
+        "Price": "$280",
+        "Status": "Active"
+      },
+      {
+        "Name": "Flute for Beginners",
+        "Description": "Start with melodious flute.",
+        "Instructor": "Amit Shah",
+        "Instrument": "Flute",
+        "DayofWeek": "Tuesday",
+        "No_ofStudents": 20,
+        "Price": "$180",
+        "Status": "Closed"
+      },
+      {
+        "Name": "Indian Vocal Carnatic",
+        "Description": "Explore Carnatic vocal music.",
+        "Instructor": "Lakshmi Iyer",
+        "Instrument": "Voice",
+        "DayofWeek": "Thursday",
+        "No_ofStudents": 10,
+        "Price": "$220",
+        "Status": "Active"
+      },
+      {
+        "Name": "Harmonium Basics",
+        "Description": "Fundamentals of harmonium.",
+        "Instructor": "Prakash Desai",
+        "Instrument": "Harmonium",
+        "DayofWeek": "Friday",
+        "No_ofStudents": 18,
+        "Price": "$300",
+        "Status": "Archived"
+      },{
+        "Name": "Keyboard Essentials",
+        "Description": "Learn keyboard basics.",
+        "Instructor": "Sophie Martin",
+        "Instrument": "Keyboard",
+        "DayofWeek": "Saturday",
+        "No_ofStudents": 14,
+        "Price": "$220",
+        "Status": "Active"
+        
+      },
+      {
+        "Name": "Tabla Rhythms",
+        "Description": "Master tabla rhythms.",
+        "Instructor": "Arun Verma",
+        "Instrument": "Tabla",
+        "DayofWeek": "Wednesday",
+        "No_ofStudents": 16,
+        "Price": "$270",
+        "Status": "Active"
+        
+      },
+      {
+        "Name": "Guitar Basics",
+        "Description": "Fundamentals of guitar playing.",
+        "Instructor": "David Brown",
+        "Instrument": "Guitar",
+        "DayofWeek": "Monday",
+        "No_ofStudents": 15,
+        "Price": "$230",
+        "Status": "Archived"
+        
+      },
+      {
+        "Name": "Piano for Kids",
+        "Description": "Fun piano lessons for kids.",
+        "Instructor": "Emily Davis",
+        "Instrument": "Piano",
+        "DayofWeek": "Tuesday",
+        "No_ofStudents": 12,
+        "Price": "$200",
+        "Status": "Active"
+        
+      },
+      {
+        "Name": "Sitar Fusion",
+        "Description": "Blend traditional sitar with modern music.",
+        "Instructor": "Rajesh Patel",
+        "Instrument": "Sitar",
+        "DayofWeek": "Thursday",
+        "No_ofStudents": 8,
+        "Price": "$290",
+        "Status": "Active"
+        
+      }
+    ]
+  }
+  

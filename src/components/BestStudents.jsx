@@ -9,47 +9,59 @@ const BestStudents = () => {
           View All Students
         </p>
       </div>
-      <div className="flex flex-col p-[24px] items-start gap-[16px] self-stretch rounded-[6px] bg-white">
-        <table className="min-w-full divide-y divide-gray-200 bg-white">
-          <thead className="font-bold text-head text-[14px]">
+      <div className="flex flex-col p-[24px] items-start gap-[16px] self-stretch rounded-[6px] bg-white justify-between">
+        <table className="min-w-full divide-y divide-gray-200 bg-white ">
+          <thead className="font-bold text-head text-[14px]  ">
             <tr>
-              <th scope="col" className="px-6 py-3 text-left   ">
-                Reg. No
-              </th>
-              <th scope="col" className="px-6 py-3 text-left    ">
-                F. Name
-              </th>
-              <th scope="col" className="px-6 py-3 text-left  ">
-                L. Name
-              </th>
-              <th scope="col" className="px-6 py-3 text-left  ">
-                Course #
-              </th>
-              <th scope="col" className="px-6 py-3 text-left   ">
-                Total Fess
-              </th>
-              <th scope="col" className="px-6 py-3 text-left   ">
-                Reg. Date
-              </th>
+              <th className="py-[8px]">Reg. No</th>
+              <th className="py-[8px]">F. Name</th>
+              <th className="py-[8px]">L. Name</th>
+              <th className="py-[8px]">Course #</th>
+              <th className="py-[8px]">Total Fess</th>
+              <th className="py-[8px]">Reg. Date</th>
             </tr>
           </thead>
-          <tbody className="bg-white divide-y divide-gray-200 text-tableRow">
+          <tbody className="bg-white divide-y text-center divide-gray-200 text-tableRow text-ceter">
             {/* Table rows go here */}
             <tr>
-              <td className="px-6 py-4 whitespace-nowrap">1</td>
-              <td className="px-6 py-4 whitespace-nowrap">John Doe</td>
-              <td className="px-6 py-4 whitespace-nowrap">Computer Science</td>
-              <td className="px-6 py-4 whitespace-nowrap">3</td>
-              <td className="px-6 py-4 whitespace-nowrap">$500</td>
-              <td className="px-6 py-4 whitespace-nowrap">2023-09-12</td>
+              <td className="py-[8px]">1</td>
+              <td className="py-[8px]">John Doe</td>
+              <td className="py-[8px]">Computer Science</td>
+              <td className="py-[8px]">3</td>
+              <td className="py-[8px]">$500</td>
+              <td className="py-[8px]">2023-09-12</td>
             </tr>
             <tr>
-              <td className="px-6 py-4 whitespace-nowrap">1</td>
-              <td className="px-6 py-4 whitespace-nowrap">John Doe</td>
-              <td className="px-6 py-4 whitespace-nowrap">Computer Science</td>
-              <td className="px-6 py-4 whitespace-nowrap">3</td>
-              <td className="px-6 py-4 whitespace-nowrap">$500</td>
-              <td className="px-6 py-4 whitespace-nowrap">2023-09-12</td>
+              <td className="py-[8px]">2</td>
+              <td className="py-[8px]">John Doe</td>
+              <td className="py-[8px]">Computer Science</td>
+              <td className="py-[8px]">3</td>
+              <td className="py-[8px]">$500</td>
+              <td className="py-[8px]">2023-09-12</td>
+            </tr>
+            <tr>
+              <td className="py-[8px]">3</td>
+              <td className="py-[8px]">John Doe</td>
+              <td className="py-[8px]">Computer Science</td>
+              <td className="py-[8px]">3</td>
+              <td className="py-[8px]">$500</td>
+              <td className="py-[8px]">2023-09-12</td>
+            </tr>
+            <tr>
+              <td className="py-[8px]">4</td>
+              <td className="py-[8px]">John Doe</td>
+              <td className="py-[8px]">Computer Science</td>
+              <td className="py-[8px]">3</td>
+              <td className="py-[8px]">$500</td>
+              <td className="py-[8px]">2023-09-12</td>
+            </tr>
+            <tr>
+              <td className="py-[8px]">5</td>
+              <td className="py-[8px]">John Doe</td>
+              <td className="py-[8px]">Computer Science</td>
+              <td className="py-[8px]">3</td>
+              <td className="py-[8px]">$500</td>
+              <td className="py-[8px]">2023-09-12</td>
             </tr>
           </tbody>
         </table>

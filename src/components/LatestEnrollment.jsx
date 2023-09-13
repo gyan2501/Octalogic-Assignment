@@ -1,4 +1,19 @@
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getLatestEnroll } from "../redux/course/action";
+
 const LatestEnrollment = () => {
+  const dispatch = useDispatch();
+  const courses = useSelector((state) => state.courseReducer);
+
+  const AllEnrolls = courses.latestEnrollment;
+
+  // console.log("All Enroll", AllEnrolls);
+
+  useEffect(() => {
+    getLatestEnroll(dispatch);
+  }, []);
+
   return (
     <div className="flex flex-col items-start gap-[16px] w-full">
       <div className="flex justify-between items-center self-stretch">
@@ -9,43 +24,30 @@ const LatestEnrollment = () => {
           View All Courses
         </p>
       </div>
-      <div className="flex flex-col p-[24px] items-start gap-[16px] self-stretch rounded-[6px] bg-white">
-        <table className="min-w-full divide-y divide-gray-200 bg-white">
-          <thead className="font-bold text-head text-[14px]">
+      <div className="flex flex-col p-[24px] items-start gap-[16px] self-stretch rounded-[6px] bg-white justify-between">
+        <table className="min-w-full divide-y divide-gray-200 bg-white ">
+          <thead className="font-bold text-head text-[14px]  ">
             <tr>
-              <th scope="col" className="px-6 py-3 text-left   ">
-                Enr. No
-              </th>
-              <th scope="col" className="px-6 py-3 text-left    ">
-                S. Name
-              </th>
-              <th scope="col" className="px-6 py-3 text-left  ">
-                C. Name
-              </th>
-              <th scope="col" className="px-6 py-3 text-left  ">
-                Fees
-              </th>
-              <th scope="col" className="px-6 py-3 text-left   ">
-                Enr. Date
-              </th>
+              <th className="py-[8px]">Enr. No</th>
+              <th className=" py-[8px]">S. Name</th>
+              <th className=" py-[8px] ">C. Name</th>
+              <th className=" py-[8px]  ">Fees</th>
+              <th className=" py-[8px] ">Enr. Date</th>
             </tr>
           </thead>
-          <tbody className="bg-white divide-y divide-gray-200 text-tableRow">
+          <tbody className="bg-white divide-y text-center divide-gray-200 text-tableRow text-ceter">
             {/* Table rows go here */}
-            <tr>
-              <td className="px-6 py-4 whitespace-nowrap">1</td>
-              <td className="px-6 py-4 whitespace-nowrap">John Doe</td>
-              <td className="px-6 py-4 whitespace-nowrap">Computer Science</td>
-              <td className="px-6 py-4 whitespace-nowrap">$500</td>
-              <td className="px-6 py-4 whitespace-nowrap">2023-09-12</td>
-            </tr>
-            <tr>
-              <td className="px-6 py-4 whitespace-nowrap">1</td>
-              <td className="px-6 py-4 whitespace-nowrap">John Doe</td>
-              <td className="px-6 py-4 whitespace-nowrap">Computer Science</td>
-              <td className="px-6 py-4 whitespace-nowrap">$500</td>
-              <td className="px-6 py-4 whitespace-nowrap">2023-09-12</td>
-            </tr>
+
+            {AllEnrolls.map((el, i) => (
+              <tr key={i}>
+                <td className=" py-[8px] ">{el.enrollment_no}</td>
+                <td className=" py-[8px] ">{el.student_name}</td>
+                <td className=" py-[8px] ">{el.course_name}</td>
+                <td className=" py-[8px] ">{el.fees}</td>
+                <td className=" py-[8px] ">{el.enrollment_date}</td>
+              </tr>
+            ))}
+
           </tbody>
         </table>
       </div>

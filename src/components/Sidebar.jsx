@@ -1,10 +1,18 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Sidebar = () => {
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    navigate("/");
+  };
   return (
     <div className="flex flex-col items-center w-[96px] h-[1024px] p-[10px] pt-[12px] gap-[48px] border-r border-gray-300 bg-background-panel bg-white">
       <div className=" items-center">
-      <Link to={"/"}>   <img src="./Logo.png" alt="" /> </Link>
+        <Link to={"/"}>
+          {" "}
+          <img src="./Logo.png" alt="" />{" "}
+        </Link>
       </div>
 
       <div className="flex flex-col items-center gap-[16px] self-stretch">
@@ -44,7 +52,7 @@ const Sidebar = () => {
         </div>
       </div>
 
-      <div className="h-[744px]  justify-end  gap-[16px]flex-1  flex flex-col text-[12px] items-center py-5 px-0 self-stretch rounded-[6px] text-gray-600">
+      <div className="h-[744px]  justify-end  gap-[16px]flex-1   flex flex-col text-[12px] items-center py-5 px-0 self-stretch rounded-[6px] text-gray-600">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -58,7 +66,7 @@ const Sidebar = () => {
           />
         </svg>
 
-        <p> Logout</p>
+        <p onClick={handleLogout}> Logout</p>
       </div>
     </div>
   );
